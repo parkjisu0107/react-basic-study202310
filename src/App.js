@@ -22,13 +22,22 @@ const App = () => {
       price: 35000,
       date: new Date(2023, 7 - 1, 4),
     },
+    {
+      title: '엽기떡볶이',
+      price: 17000,
+      date: new Date(2023, 3 - 1, 28),
+    },
   ];
 
-  console.log('App 실행!');
+  // ExpenseForm에게 내려보낼 함수
+  const addExpenseHandler = (newExpense) => {
+    console.log('App 컴포넌트에서 응답함!');
+    console.log(newExpense);
+  };
 
   return (
     <>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses items={expenses} />
     </>
   );
