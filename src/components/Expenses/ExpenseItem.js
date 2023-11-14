@@ -15,13 +15,6 @@ const ExpenseItem = ({ title, price: propsPrice, date }) => {
   // 두번째 요소는 상태값을 변경하는 setter 함수
   const [itemTitle, setItemTitle] = useState(title);
 
-  // console.log(props);
-
-  // const price = 99999;
-  // const expenseDate = date;
-  // const expenseTitle = title;
-  // const expensePrice = propsPrice;
-
   // 1자리 숫자를 2자리수로 변환하는 함수
   const make2digit = (text) => {
     return text.toString().padStart(2, '0');
@@ -50,6 +43,7 @@ const ExpenseItem = ({ title, price: propsPrice, date }) => {
     // 화면을 리렌더링하고 같을 경우 리렌더링을 하지 않는다.
     // return '메롱';
     // });
+
     setItemTitle('메롱');
   };
 

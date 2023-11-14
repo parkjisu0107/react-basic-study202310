@@ -8,6 +8,7 @@ const ExpensesFilter = ({ onChangeFilter }) => {
     const selectedYear = e.target.value;
     onChangeFilter(selectedYear);
   };
+
   return (
     <div className='expenses-filter'>
       <div className='expenses-filter__control'>
